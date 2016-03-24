@@ -19,40 +19,14 @@
 
     function link(s, e) {
       s.stickyObj = e;
-      updateSticky(s.stickyContext, s.stickyData, e);
-
+      $timeout(function() {
+        updateSticky(s.stickyContext, s.stickyData, e);
+      });
       s.$watchCollection(function() {
         return [s.stickyContext, s.stickyData];
       }, function() {
         updateSticky(s.stickyContext, s.stickyData, e);
       });
-
-      // s.$watchCollection('stickyContext', function(n, o) {
-      //   if (angular.isDefined(s.stickyContext)) {
-      //     if (angular.isDefined(s.stickyData)) {
-      //       s.stickyData.context = s.stickyContext;
-      //       var x = 1;
-      //     } else {
-      //       s.stickyData = {
-      //         context: s.stickyContext,
-      //       };
-      //     }
-      //   }
-      // });
-      // s.$watchCollection('stickyData', function(n, o) {
-      //   e.sticky(s.stickyData);
-      //   $timeout(function() {
-      //     e.sticky('refresh');
-      //   });
-      // });
-      // if (angular.isObject(s.stickyData)) {
-      //   e.sticky(s.stickyData);
-
-      // } else {
-      //   $timeout(function() {
-      //     e.sticky();
-      //   });
-      // }
     }
 
     function updateSticky(context, data, el) {
@@ -71,12 +45,12 @@
       } else {
         el.sticky();
       }
-      // $timeout(function() {
-      //   el.sticky('refresh');
-      // });
+      $timeout(function() {
+        el.sticky('refresh');
+      });
     }
-
   }
+
   function stickyContextDirective(stickyService) {
     return {
       restrict: 'A',
