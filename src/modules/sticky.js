@@ -33,7 +33,6 @@
       if (angular.isDefined(context)) {
         if (angular.isDefined(data)) {
           data.context = context;
-          var x = 1;
         } else {
           data = {
             context: context,
