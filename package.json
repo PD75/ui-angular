@@ -17,21 +17,20 @@
   },
   "homepage": "https://github.com/PD75/PD75.github.io",
   "dependencies": {
-    "angular": "^1.5.2",
-    "semantic-ui": "^2.1.8"
+    "angular": "^1",
+    "jquery": "^2",
+    "semantic-ui": "^2"
   },
-   "devDependencies": {
+  "devDependencies": {
     "eslint": "*",
     "eslint-config-angular": "*",
     "eslint-plugin-angular": "*",
-    "eslint-plugin-html": "*",
     "gulp-angular-filesort": "*",
     "gulp-concat": "*",
     "gulp-eslint": "*",
     "gulp-load-plugins": "*",
     "gulp-ng-annotate": "*",
-    "gulp-print": "^2.0.1",
+    "gulp-print": "*",
     "gulp-uglify": "*"
   }
-}
 }
