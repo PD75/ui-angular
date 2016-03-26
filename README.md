@@ -1,4 +1,4 @@
-# uiAngular
+# UI Angular
 
 My _KISS_ -  semantic-ui/angularJS library
 

@@ -1,4 +1,4 @@
 {
-  "source":"distDev/ui-angular/src",
+  "source":"src",
   "output":"dist"
 }
