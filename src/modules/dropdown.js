@@ -2,10 +2,10 @@ angular.module('uiAngular')
   .directive('uiDropdown', function($timeout) {
     'use strict';
     return {
-      restrict: 'EA',
+      restrict: 'A',
       scope: {
         dropdownData: '=uiDropdownData',
-        dropdownObj: '=?uiDropdownObj',
+        dropdownObj: '=?uiDropdown',
       },
       link: link,
     };

@@ -22,7 +22,7 @@ $('.classes').method();
  ```
  
  
- **Warning:** Setting the variables for the method through javascript/jquery syntax will in many cases render the ui-directive useless, i.e.
+ **Warning:** Setting the variables for the method through javascript/jquery syntax will in many cases render the `ui-directive` useless, i.e.
  
  ```javascript
  $('.classes').method({
@@ -37,14 +37,12 @@ $('.classes').method();
  }); 
  ```
 
-
 ### Dropdown
 
 ```html
-<ANY ui-dropdown 
+<ANY ui-dropdown="vm.dropdownObject" 
   class="ui dropdown" 
-  ui-dropdown-data="vm.dropdownData"
-  ui-dropdown-obj="vm.dropdownObject">
+  ui-dropdown-data="vm.dropdownData">
   Title
   
 /*Dropdown content, static or ng-repeat*/  
@@ -55,23 +53,11 @@ $('.classes').method();
   </ANY>  
 
 </ANY>
-
-/*Alternative*/
-<ui-dropdown ...>
-
-...
-
-</ui-dropdown>
-
 ```
-`ui-dropdown` can be used as both element and attribute. Most practical is attribute.
-
 - `vm.dropdownData` [Settings in Semantic UI](http://semantic-ui.com/modules/dropdown.html#/settings) 
 -  `vm.dropdownObject` [Usage in Semantic UI](http://semantic-ui.com/modules/dropdown.html#behavior)
 
-**NOTE:** There are a lot of design options for dropdowns in [Semantic UI] and therefor not practical to allow passing of the items as an array. Use `ng-repeat` to build dynamic dropdowns.
-
-
+**NOTE:** There are a lot of design options for dropdowns in [Semantic UI] and therefore not practical to allow passing of the items as an array. Use `ng-repeat` to build dynamic dropdowns.
 
 ### Modal
 
