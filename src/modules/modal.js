@@ -13,14 +13,14 @@ angular.module('uiAngular')
         'modalData': '=?uiModalData',
         'modalUrlObj': '=?uiModalUrl',
         'modalUrl': '@?uiModalUrl',
-        'modalInstance': '=?uiModalinstance',
+        'modalObj': '=?uiModalObj',
       },
       template: '<div class="ui modal" ng-transclude></div>',
       link: link,
     };
 
     function link(scope, element) {
-      scope.modalInstance = element;
+      scope.modalObj = element;
 
       scope.$watch('modalData', function() {
         setData(scope, element);

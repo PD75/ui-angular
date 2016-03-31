@@ -5,7 +5,7 @@ angular.module('uiAngular')
       restrict: 'EA',
       scope: {
         dropdownData: '=uiDropdownData',
-        dropdownObj: '=?uiDropdown',
+        dropdownObj: '=?uiDropdownObj',
       },
       link: link,
     };
