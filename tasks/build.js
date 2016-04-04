@@ -34,7 +34,12 @@ module.exports = function(origPath) {
       .pipe(plugins.eslint.format())
       .pipe(plugins.ngAnnotate())
       .pipe(plugins.angularFilesort())
-      .pipe(plugins.concat('ui-angular.min.js'))
+      .pipe(plugins.concat('ui-angular.js'))
+      .pipe(gulp.dest(paths.output))
+      .pipe(plugins.print())
+      .pipe(plugins.rename({
+        suffix: ".min",
+      }))
       .pipe(plugins.uglify())
       .pipe(gulp.dest(paths.output))
       .pipe(plugins.print());

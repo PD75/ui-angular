@@ -18,6 +18,7 @@
   "homepage": "https://github.com/PD75/PD75.github.io",
   "dependencies": {
     "angular": "^1",
+    "gulp-rename": "^1.2.2",
     "jquery": "^2",
     "semantic-ui": "^2"
   },
