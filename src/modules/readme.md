@@ -88,7 +88,7 @@ $('.classes').method();
 -  `vm.modalObject` [Usage in Semantic UI](http://semantic-ui.com/modules/modal.html#behavior)
 
 
-#### Popup
+### Popup
 
 ```html
 <ANY ui-popup="vm.popupData" 
@@ -105,7 +105,7 @@ $('.classes').method();
 
 - `semanticUIMetadata` Can also specify content with html attributes, see [Specifying Content In Metadata in Semantic UI](http://semantic-ui.com/modules/popup.html#specifying-content-in-metadata)
 
-#### Sticky
+### Sticky
 
 ```html
 <ANY-OPTIONAL ui-sticky-context="vm.stickyContext"> 

@@ -1,8 +1,8 @@
 {
   "name": "ui-angular",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "My KISS - semantic-ui/angularJS library ",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +15,9 @@
   "bugs": {
     "url": "https://github.com/PD75/ui-angular/issues"
   },
-  "homepage": "https://github.com/PD75/PD75.github.io",
+  "homepage": "https://github.com/PD75/ui-angular",
   "dependencies": {
     "angular": "^1",
-    "gulp-rename": "^1.2.2",
     "jquery": "^2",
     "semantic-ui": "^2"
   },
@@ -32,6 +31,7 @@
     "gulp-load-plugins": "*",
     "gulp-ng-annotate": "*",
     "gulp-print": "*",
+    "gulp-rename": "*",
     "gulp-uglify": "*"
   }
 }
