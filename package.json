@@ -8,13 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PD75/ui-angular.git"
+    "url": "https://github.com/PD75/ui-angular.git"
   },
   "author": "Paul Dhillon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PD75/ui-angular/issues"
   },
+  "keywords": [
+    "angular",
+    "semantic-ui"
+  ],
   "homepage": "https://github.com/PD75/ui-angular",
   "dependencies": {
     "angular": "^1",

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/ui-angular.png" alt="UI Angular"/><br/>
+</p>
+
 # UI Angular
 
 My _KISS_ -  semantic-ui/angularJS library
