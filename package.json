@@ -1,6 +1,6 @@
 {
   "name": "ui-angular",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "My KISS - semantic-ui/angularJS library ",
   "main": "index.js",
   "scripts": {
@@ -8,13 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PD75/ui-angular.git"
+    "url": "https://github.com/PD75/ui-angular.git"
   },
   "author": "Paul Dhillon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PD75/ui-angular/issues"
   },
+  "keywords": [
+    "angular",
+    "semantic-ui"
+  ],
   "homepage": "https://github.com/PD75/ui-angular",
   "dependencies": {
     "angular": "^1",
@@ -28,6 +32,7 @@
     "gulp-angular-filesort": "*",
     "gulp-concat": "*",
     "gulp-eslint": "*",
+    "gulp-header": "^1.7.1",
     "gulp-load-plugins": "*",
     "gulp-ng-annotate": "*",
     "gulp-print": "*",

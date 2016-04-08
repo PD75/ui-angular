@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/ui-angular.png" alt="UI Angular"/><br/>
+</p>
+
 # UI Angular
 
 My _KISS_ -  semantic-ui/angularJS library
@@ -27,31 +31,63 @@ I have written directive as I have needed the modules, which mean they are used 
 
 Please put an issue if you intend to contribute your work, then I will put some effort to write the rules and guidlines etc.
 
-#### Modules
-- [ ] Accordian
-- [ ] ~~Checkbox~~ *
-- [ ] Dimmer
-- [x] Dropdown
-- [ ] Embed
-- [x] Modal
-- [ ] ~~Nag~~ *
-- [x] Popup
-- [ ] Progress
-- [ ] Rating
-- [ ] Search**
-- [ ] Shape
-- [ ] Sidebar
-- [x] Sticky
-- [ ] ~~Tab~~ *
-- [ ] Transition**
 
-#### Behaviours
-- [ ] ~~API~~ *
-- [ ] ~~Form Validation~~ *
-- [x] visibility
-   
+| Backlog       | Planned     | Done       | Not Planned              |
+| ------------- |-------------| -----------|--------------------------|
+| Dimmer        | Accordian   | Dropdown   | ~~Checkbox~~ *           |
+| Embed         | Sidebar     | Modal      | ~~Nag~~ *                |
+| Progress      |             | Popup      | ~~Tab~~ *                |
+| Rating        |             | Sticky     |                          |
+| Search**      |             |            |                          |
+| Shape         |             |            |                          |
+| Transition**  |             |            |                          |
+|               |             | Visibility | ~~API~~ *                |    
+|               |             |            | ~~Form Validation~~ *    |           
+|               |             |            | ~~__Elements__~~ \***    |           
+|               |             |            | ~~__Collections__~~ \*** |           
+
+
 \* Found AngularJS out of the box does the job well enough
 \** Not sure if AngularJs is better suited or not 
+\**** No javascript, so no plans unless there is a compelling reason
 
+## Install
 
+### Download
 
+#### NPM
+
+```bat
+> npm install ui-angular --save
+
+```
+
+#### Bower
+
+```bat
+> bower install ui-angular --save
+
+```
+
+### Build
+
+#### Local Build
+
+To build inside `ui-angular` folder
+- Go to ui-angular folder
+- Install all needed packages `ui-angular> npm install`
+- Build `ui-angular> gulp build`
+
+#### Integrated Build
+
+To integrate with your own gulp build
+- Copy ui-angular to your build folder and set the relative paths in the file
+- There must be a semantic.json file in the same folder
+- add 
+``` javascript
+var buildUIAngular = require('[your path]/ui-angular/tasks/build')(__dirname); 
+gulp.task('buildUIAngular', buildUIAngular);
+```
+- And integrate this with your build task
+
+Only the the modules used for Semantic-UI will be included in the build

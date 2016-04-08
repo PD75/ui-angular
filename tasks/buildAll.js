@@ -5,11 +5,8 @@
 
 
 
-module.exports = function(origPath) {
+module.exports = function() {
   'use strict';
-
-  var semantic = require(origPath + '/semantic.json');
-  var paths = require(origPath + '/ui-angular.json');
 
   // Include gulp
   var gulp = require('gulp');
@@ -25,23 +22,9 @@ module.exports = function(origPath) {
     ' **/',
     ''].join('\n');
 
+  var source ='./src/**/*.js';
+  var output = './dist/';
 
-  // console.log(__dirname);
-  // console.log(origPath);
-  // console.log(require.main.filename);
-
-  var source = [];
-  if ( typeof semantic.components !== 'undefined' && semantic.components ){
-    for (var c = 0; c < semantic.components.length; c++) {
-      source[c] = paths.source + '/**/' + semantic.components[c] + '.js';
-      // console.log(source[c] + ' ' + c);
-    }
-    source[semantic.components.length] = paths.source + '/**/ui*.js';
-  } else {
-    source[0] = paths.source + '/**/*.js';
-
-  }
-  
 
   return function() {
     return gulp.src(source)
@@ -52,14 +35,14 @@ module.exports = function(origPath) {
       .pipe(plugins.angularFilesort())
       .pipe(plugins.concat('ui-angular.js'))
       .pipe(plugins.header(banner, { pkg : pkg } ))
-      .pipe(gulp.dest(paths.output))
+      .pipe(gulp.dest(output))
       .pipe(plugins.print())
       .pipe(plugins.rename({
         suffix: ".min",
       }))
       .pipe(plugins.uglify())
       .pipe(plugins.header(banner, { pkg : pkg } ))
-      .pipe(gulp.dest(paths.output))
+      .pipe(gulp.dest(output))
       .pipe(plugins.print());
   };
 };
