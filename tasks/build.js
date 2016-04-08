@@ -31,11 +31,17 @@ module.exports = function(origPath) {
   // console.log(require.main.filename);
 
   var source = [];
-  for (var c = 0; c < semantic.components.length; c++) {
-    source[c] = paths.source + '/**/' + semantic.components[c] + '.js';
-    // console.log(source[c] + ' ' + c);
+  if ( typeof semantic.components !== 'undefined' && semantic.components ){
+    for (var c = 0; c < semantic.components.length; c++) {
+      source[c] = paths.source + '/**/' + semantic.components[c] + '.js';
+      // console.log(source[c] + ' ' + c);
+    }
+    source[semantic.components.length] = paths.source + '/**/ui*.js';
+  } else {
+    source[0] = paths.source + '/**/*.js';
+
   }
-  source[semantic.components.length] = paths.source + '/**/ui*.js';
+  
 
   return function() {
     return gulp.src(source)
