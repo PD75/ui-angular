@@ -10,7 +10,7 @@
     "angular",
     "semantic-ui"
   ],
-  "homepage": "https://github.com/PD75/ui-angular",
+  "homepage": "http://pd75.github.io/#/ui-angular",
   "moduleType": [],
   "ignore": [
     "**/.*",
