@@ -59,14 +59,12 @@ Please put an issue if you intend to contribute your work, then I will put some 
 
 ```bat
 > npm install ui-angular --save
-
 ```
 
 #### Bower
 
 ```bat
 > bower install ui-angular --save
-
 ```
 
 ### Build
