@@ -1,42 +1,5 @@
 ## Modules
 
-### Common features
-
-- All object are initiated if needed to. E.g.
- ``` javascript
-$('.classes').method();
- ```
-
-
-- `vm.directiveObject` Dom instance object to be used for [Semantic UI] usage. E.g.
- ``` javascript
- vm.directiveObject.method('show');
- ```
-
-- `vm.directiveData` [Semantic UI] settings object. E.g.
- ```javascript
- vm.directiveData = {
-   on: 'hover',
-   onShow: function(){...}
- };
- ```
- 
- 
- **Warning:** Setting the variables for the method through javascript/jquery syntax will in many cases render the `ui-directive` useless, i.e.
- 
- ```javascript
- $('.classes').method({
-  setting: value
- });
- 
- /*OR*/
- 
- vm.directiveObject.method({
-  setting: value,
-  callBack: function(){...}
- }); 
- ```
-
 ### Dropdown
 
 ```html
@@ -105,6 +68,35 @@ $('.classes').method();
 
 - `semanticUIMetadata` Can also specify content with html attributes, see [Specifying Content In Metadata in Semantic UI](http://semantic-ui.com/modules/popup.html#specifying-content-in-metadata)
 
+### Sidebar
+
+```html
+<ANY-OPTIONAL ui-sidebar-event="vm.sidebarEvent"> 
+  
+  ...
+  
+  <ANY ui-sidebar="vm.sidebarData" 
+    ui-sidebar-obj="vm.sidebarObject"
+    ui-sidebar-event-id="vm.sidebarEvent">
+  </ANY>
+  
+  ...
+  
+</ANY-OPTIONAL>
+
+```
+
+- `vm.sidebarData` [Settings in Semantic UI](http://semantic-ui.com/modules/sidebar.html#/settings) 
+
+-  `vm.sidebarObject` [Usage in Semantic UI](http://semantic-ui.com/modules/sidebar.html#behavior)
+
+- `vm.sidebarEvent` 
+  - Just pass and empty variable for each case, used to assign the trigger to show the sidebar
+  - `ui-sidebar-event` is on the DOM element you want it trigger the sidebar
+  - See [Triggering show/hide with other content](http://semantic-ui.com/modules/sidebar.html#triggering-showhide-with-other-content)
+
+[Semantic UI]:http://semantic-ui.com
+
 ### Sticky
 
 ```html
@@ -131,5 +123,4 @@ $('.classes').method();
   - Just pass and empty variable for each case, allows sticking to adjescent dom elements
   - `ui-sticky-context` is on the DOM element you want it to stick to
   - See [Sticking to Adjacent Context](http://semantic-ui.com/modules/sticky.html#sticking-to-adjacent-context)
-
 [Semantic UI]:http://semantic-ui.com
