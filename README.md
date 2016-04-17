@@ -10,6 +10,14 @@ My _KISS_ -  semantic-ui/angularJS library
 
 You will find the all the help and usage instructions with navigation menu on the [UI Angular homepage](http://pd75.github.io/#/ui-angular). Here the readme's are distributed over the relevant folders.
 
+---
+
+[![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=plastic&maxAge=3600)](https://raw.githubusercontent.com/PD75/ui-angular/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/ui-angular.svg?style=plastic&maxAge=3600)](https://www.npmjs.com/package/ui-angular)
+[![GitHub release](https://img.shields.io/github/release/pd75/ui-angular.svg?style=plastic&label=GitHub&maxAge=3600 )](https://github.com/PD75/ui-angular/releases)
+
+---
+
 ### Approach
 
 Designed around KISS Principle _Keep it simple stupid_
@@ -37,10 +45,10 @@ Please put an issue if you intend to contribute your work, then I will put some 
 | Backlog       | Planned     | Done       | Not Planned              |
 | ------------- |-------------| -----------|--------------------------|
 | Dimmer        | Accordian   | Dropdown   | ~~Checkbox~~ *           |
-| Embed         | Sidebar     | Modal      | ~~Nag~~ *                |
+| Embed         |             | Modal      | ~~Nag~~ *                |
 | Progress      |             | Popup      | ~~Tab~~ *                |
-| Rating        |             | Sticky     |                          |
-| Search**      |             |            |                          |
+| Rating        |             | Sidebar    |                          |
+| Search**      |             | Sticky     |                          |
 | Shape         |             |            |                          |
 | Transition**  |             |            |                          |
 |               |             | Visibility | ~~API~~ *                |    
@@ -81,7 +89,7 @@ To build inside `ui-angular` folder
 #### Integrated Build
 
 To integrate with your own gulp build
-- Copy ui-angular to your build folder and set the relative paths in the file
+- Copy `ui-angular.json` to your build folder and set the relative paths in the file
 - There must be a semantic.json file in the same folder
 - add 
 ``` javascript
