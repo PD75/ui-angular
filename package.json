@@ -20,11 +20,7 @@
     "semantic-ui"
   ],
   "homepage": "http://pd75.github.io/#/ui-angular",
-  "dependencies": {
-    "angular": "^1",
-    "jquery": "^2",
-    "semantic-ui": "^2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "*",
     "eslint-config-angular": "*",

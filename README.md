@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/ui-angular.png" alt="UI Angular"/><br/>
+  <img src="img/ui-angular.png" alt="UI Angular" style="max-width: 80%"/><br/>
 </p>
 
 # UI Angular
@@ -7,6 +7,8 @@
 My _KISS_ -  semantic-ui/angularJS library
 
 ## About
+
+You will find the all the help and usage instructions with navigation menu on the [UI Angular homepage](http://pd75.github.io/#/ui-angular). Here the readme's are distributed over the relevant folders.
 
 ### Approach
 
@@ -59,14 +61,12 @@ Please put an issue if you intend to contribute your work, then I will put some 
 
 ```bat
 > npm install ui-angular --save
-
 ```
 
 #### Bower
 
 ```bat
 > bower install ui-angular --save
-
 ```
 
 ### Build
@@ -91,3 +91,43 @@ gulp.task('buildUIAngular', buildUIAngular);
 - And integrate this with your build task
 
 Only the the modules used for Semantic-UI will be included in the build
+
+## Usage
+
+### Common features
+
+- All object are initiated if needed to. E.g.
+ ``` javascript
+$('.classes').method();
+ ```
+
+
+- `vm.directiveObject` Dom instance object to be used for [Semantic UI] usage. E.g.
+ ``` javascript
+ vm.directiveObject.method('show');
+ ```
+
+- `vm.directiveData` [Semantic UI] settings object. E.g.
+ ```javascript
+ vm.directiveData = {
+   on: 'hover',
+   onShow: function(){...}
+ };
+ ```
+ 
+ 
+ **Warning:** Setting the variables for the method through javascript/jquery syntax will in many cases render the `ui-directive` useless, i.e.
+ 
+ ```javascript
+ $('.classes').method({
+  setting: value
+ });
+ 
+ /*OR*/
+ 
+ vm.directiveObject.method({
+  setting: value,
+  callBack: function(){...}
+ }); 
+ ```
+ [Semantic UI]:http://semantic-ui.com
