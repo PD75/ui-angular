@@ -27,7 +27,7 @@ angular.module('uiAngular')
       });
 
       scope.$watch('modalShow', function(modalShow) {
-          element.modal(modalShow ? 'show' : 'hide');
+        element.modal(modalShow ? 'show' : 'hide');
       });
       scope.$on('$destroy', function() {
         element.modal('hide');
