@@ -22,7 +22,7 @@ You will find the all the help and usage instructions with navigation menu on th
 
 Designed around KISS Principle _Keep it simple stupid_
 
-1. Accept __all__ parameters that _Semantic UI_ does, angular features are extra.
+1. Accept __all__ parameters that _Semantic UI_ does and extends with some angular features.
 2. Pass data in variables and objects (don't clutter html, use controller and services)
 3. Call _Semantic UI_ js code as much as possible: __Why reinvent the wheel!__
 4. _Semantic UI_ syntax looks good with angular, no need to have directive to add html classes unless really nessesary or simpifies significantly

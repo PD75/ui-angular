@@ -1,7 +1,7 @@
 /**
- * ui-angular - v0.0.4
+ * ui-angular - v0.1.2
  * My KISS - semantic-ui/angularJS library  
- * https://github.com/PD75/ui-angular
+ * http://pd75.github.io/#/ui-angular
  * MIT License
  **/
 angular.module('uiAngular', []);
@@ -68,6 +68,7 @@ angular.module('uiAngular', []);
       },
       link: link,
     };
+
     function link(s, e) {
       var classId = stickyService.getId();
       s.stickyContext = '.' + classId;
@@ -86,6 +87,80 @@ angular.module('uiAngular', []);
   }
 })();
 
+(function() {
+  'use strict';
+
+  sidebarEventDirective.$inject = ["sidebarService"];
+  sidebarDirective.$inject = ["$timeout"];
+  angular.module('uiAngular')
+    .service('sidebarService', sidebarService)
+    .directive('uiSidebarEvent', sidebarEventDirective)
+    .directive('uiSidebar', sidebarDirective);
+
+  function sidebarDirective($timeout) {
+    return {
+      restrict: 'A',
+      scope: {
+        sidebarData: '=uiSidebarData',
+        sidebarObj: '=?uiSidebar',
+        sidebarEvent: '=uiSidebarEventId',
+      },
+      link: link,
+    };
+
+    function link(s, e) {
+      s.sidebarObj = e;
+      $timeout(function() {
+        updatesidebar(s.sidebarEvent, s.sidebarData, e);
+      });
+      s.$watchCollection(function() {
+        return [s.sidebarEvent, s.sidebarData];
+      }, function() {
+        updatesidebar(s.sidebarEvent, s.sidebarData, e);
+      });
+    }
+
+    function updatesidebar(Event, data, el) {
+
+      if (angular.isDefined(data)) {
+        el.sidebar(data);
+      }
+      $timeout(function() {
+        if (angular.isDefined(Event)) {
+          el.sidebar('attach events', Event);
+        } else {
+          el.sidebar();
+        }
+      });
+    }
+  }
+
+  function sidebarEventDirective(sidebarService) {
+    return {
+      restrict: 'A',
+      scope: {
+        sidebarEvent: '=uiSidebarEvent',
+      },
+      link: link,
+    };
+
+    function link(s, e) {
+      var classId = sidebarService.getId();
+      s.sidebarEvent = '.' + classId;
+      e.addClass(classId);
+    }
+  }
+
+  function sidebarService() {
+    var s = this;
+    s.getId = getId;
+    s.index = 0;
+
+    function getId() {
+      return 'sidebar' + s.index++;
+    }
+  }
+})();
 
 angular.module('uiAngular')
   .directive('uiPopup', function() {
@@ -145,7 +220,7 @@ angular.module('uiAngular')
       });
 
       scope.$watch('modalShow', function(modalShow) {
-          element.modal(modalShow ? 'show' : 'hide');
+        element.modal(modalShow ? 'show' : 'hide');
       });
       scope.$on('$destroy', function() {
         element.modal('hide');
