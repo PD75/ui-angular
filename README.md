@@ -102,7 +102,7 @@ Only the the modules used for Semantic-UI will be included in the build
 
 ## Usage
 
-## Load the Module
+### Load the Module
 
 Use `uiAngular` to load the module. E.g.
 
