@@ -1,4 +1,3 @@
-
 angular.module('uiAngular')
   .directive('uiPopup', function() {
     'use strict';

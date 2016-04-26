@@ -58,6 +58,7 @@
       },
       link: link,
     };
+
     function link(s, e) {
       var classId = stickyService.getId();
       s.stickyContext = '.' + classId;
